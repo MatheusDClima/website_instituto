@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>doar</title>
+</head>
+<body>
+
+     <!-- HEADER moderno com logo e menu -->
+<header class="top-header">
+  <div class="container header-content">
+    <div class="logo">
+      <img src="IMG/logo.png" alt="Instituto Esperança" />
+    </div>
+
+    <button class="menu-toggle" aria-label="Abrir menu">
+      ☰
+    </button>
+
+    <nav class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="contato.html">Contato</a>
+      <a href="doar.html">Doar</a>
+    </nav>
+  </div>
+
+</header>
+
+    <section id="doar" class="doacao">
+      <h2>Ajude nossa causa</h2>
+      <img src="IMG/qrbg.png" alt="Doação via Pix">
+      <p>Chave Pix: <strong>institutoesperanca@pix.com.br</strong></p>
+    </section>
+
+    <footer>
+    <div class="footer-cols">
+      <div>
+        <h3>Contatos</h3>
+        <p>contato@institutoesperanca.org.br</p>
+      </div>
+      <div>
+        <h3>Siga-nos</h3>
+        <p>Instagram | Facebook | YouTube</p>
+      </div>
+      <div>
+        <h3>Endereço</h3>
+        <p>Brasília, DF • Brasil</p>
+      </div>
+    </div>
+    <p class="copy">&copy; 2025 Instituto Esperança. Todos os direitos reservados.</p>
+  </footer>
+
+    <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>

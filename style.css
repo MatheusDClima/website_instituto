@@ -8,6 +8,25 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:'Poppins',sans-serif; color:var(--text); background:var(--bg); }
 
+
+/*ABRIR A SECTION SUAVEMENTE */
+
+/* Estado inicial oculto */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Quando visível na tela */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ABRIR A SECTION SUAVEMENTE */
+
+
 /* Sticky header fixo */
 .top-header {
   position: sticky;
@@ -39,7 +58,7 @@ body { font-family:'Poppins',sans-serif; color:var(--text); background:var(--bg)
 /* Botão de menu hamburguer */
 .menu-toggle {
   display: none;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   background: none;
   border: none;
   color: white;
@@ -170,7 +189,7 @@ main { width:100%; margin:auto; }
   position: relative;
   background: url('IMG/banner.jpg') center/cover no-repeat;
   color: white;
-  height: 400px;
+  height: 650px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,6 +206,8 @@ main { width:100%; margin:auto; }
   background: rgba(0, 0, 0, 0.7); /* escurece a imagem */
   z-index: 0;
 }
+
+
 
 .hero-content {
   position: relative;
@@ -205,16 +226,84 @@ main { width:100%; margin:auto; }
   margin-bottom: 20px;
 }
 
+.hero_contato {
+    position: relative;
+  background: url('IMG/textura_contato.avif') center/cover no-repeat;
+  color: white;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 12px; */
+  /* margin-top: 40px; */
+  overflow: hidden;
+}
+
+.hero_contato::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* escurece a imagem */
+  z-index: 0;
+}
+
+.hero_projetos {
+    position: relative;
+  background: url('IMG/projeto1.jpg') center/cover no-repeat;
+  color: white;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 12px; */
+  /* margin-top: 40px; */
+  overflow: hidden;
+}
+
+.hero_projetos::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* escurece a imagem */
+  z-index: 0;
+}
+
+.hero_sobre {
+    position: relative;
+  background: url('IMG/projeto2.jpg') center/cover no-repeat;
+  color: white;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 12px; */
+  /* margin-top: 40px; */
+  overflow: hidden;
+}
+
+.hero_sobre::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* escurece a imagem */
+  z-index: 0;
+}
+
 .btn-video {
   display:inline-block; margin-top:15px;
   background:rgba(255,255,255,0.8); color:var(--primary);
-  padding:10px 20px; border-radius:30px;
+  padding:10px 20px; border-radius:0;
   text-decoration:none; font-weight:500;
 }
 .btn-video:hover { background:#fff; }
 
 #projetos {
   padding:5px 20px;
+  margin-bottom: 30px;
+  /* height: 500px; */
 }
 
 #projetos h2 { 

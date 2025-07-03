@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- HEADER moderno com logo e menu -->
+<!-- HEADER moderno com logo e menu -->
 <header class="top-header">
   <div class="container header-content">
     <div class="logo">
@@ -21,19 +21,18 @@
     </button>
 
     <nav class="nav-links">
-      <a href="#sobre">Sobre</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#doar">Doar</a>
-      <a href="#contato">Contato</a>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="contato.html">Contato</a>
+      <a href="doar.html">Doar</a>
     </nav>
   </div>
 
 </header>
 
-
-
   <main>
-    <section id="sobre" class="hero">
+    <section id="sobre" class="hero fade-in">
       <div class="hero-content">
         <h2>O futuro começa aqui</h2>
         <p>Confira o vídeo de apresentação do nosso instituto</p>
@@ -42,9 +41,39 @@
       </div>
     </section>
 
-    <section id="projetos">
+    <section id="sobre" class="hero_sobre fade-in">
+      <div class="hero-content">
+        <h2> Conheça o Instituto Esperança</h2>
+        <p>Descubra mais sobre nossos projetos e serviços.</p>
+        <a class="btn-video" href="sobre.html" id="abrir-video">Saiba mais</a>
+
+      </div>
+    </section>
+    
+ 
+
+    <section id="sobre" class="hero_projetos fade-in">
+      <div class="hero-content">
+        <h2>Projetos</h2>
+        <p>Confira nossos projetos realizados.</p>
+        <a class="btn-video" href="projetos.html" id="abrir-video">Saiba mais</a>
+
+      </div>
+    </section>
+
+    <section id="sobre" class="hero_contato fade-in">
+      <div class="hero-content">
+        <h2>Quer saber mais sobre o Instituto?</h2>
+        <p>Entre em contato conosco e nos conheça melhor!</p>
+        <a class="btn-video" href="contato.html" id="abrir-video">Contato</a>
+
+      </div>
+    </section>
+
+     <!-- PROJETOS -->
+     <section id="projetos">
       <h2>Nossas Ações</h2>
-      <div class="cards">
+      <div class="cards fade-in">
         <div class="card">
           <img src="IMG/projeto1.jpg" alt="Ação 1">
           <div class="card-info">
@@ -72,28 +101,12 @@
       </div>
     </section>
 
-    <section id="impacto" class="impacto">
+    <!-- <section id="impacto" class="impacto">
       <div class="impacto-item"><strong>200+</strong><span>Crianças atendidas</span></div>
       <div class="impacto-item"><strong>3.000+</strong><span>Atendimentos/ano</span></div>
       <div class="impacto-item"><strong>500+</strong><span>Famílias apoiadas</span></div>
       <div class="impacto-item"><strong>10+</strong><span>Ano de atividade</span></div>
-    </section>
-
-    <section id="contato" class="contato">
-      <h2>Fale Conosco</h2>
-      <form action="#" class="form-contato">
-        <input type="text" placeholder="Nome" required>
-        <input type="email" placeholder="E-mail" required>
-        <textarea placeholder="Sua mensagem" rows="5" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-
-    <section id="doar" class="doacao">
-      <h2>Ajude nossa causa</h2>
-      <img src="IMG/qrbg.png" alt="Doação via Pix">
-      <p>Chave Pix: <strong>institutoesperanca@pix.com.br</strong></p>
-    </section>
+    </section> -->
   </main>
 
   <footer>
@@ -126,7 +139,7 @@
 </div>
 
 
-
+  <!-- ABRIR MENU MOBILE -->
   <script>
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
@@ -136,6 +149,8 @@
   });
 </script>
 
+
+<!-- MODAL PARA APARECER O VÍDEO -->
 <script>
   const abrirVideoBtn = document.getElementById('abrir-video');
   const fecharVideoBtn = document.getElementById('fechar-video');
@@ -156,6 +171,23 @@
       modalVideo.style.display = 'none';
       modalVideo.querySelector('iframe').src = modalVideo.querySelector('iframe').src;
     }
+  });
+</script>
+
+<!-- A SECTION APARECE SUAVEMENTE -->
+<script>
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visible');
+        // Para animar só uma vez:
+        observador.unobserve(entrada.target);
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in').forEach((el) => {
+    observador.observe(el);
   });
 </script>
 

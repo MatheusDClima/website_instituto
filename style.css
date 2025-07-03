@@ -164,7 +164,7 @@ body { font-family:'Poppins',sans-serif; color:var(--text); background:var(--bg)
 }
 
 
-main { width:100%; margin:auto; padding:5px 20px; }
+main { width:100%; margin:auto; }
 
 .hero {
   position: relative;
@@ -174,8 +174,8 @@ main { width:100%; margin:auto; padding:5px 20px; }
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
-  margin-top: 40px;
+  /* border-radius: 12px; */
+  /* margin-top: 40px; */
   overflow: hidden;
 }
 
@@ -212,6 +212,10 @@ main { width:100%; margin:auto; padding:5px 20px; }
   text-decoration:none; font-weight:500;
 }
 .btn-video:hover { background:#fff; }
+
+#projetos {
+  padding:5px 20px;
+}
 
 #projetos h2 { 
   text-align:center; 

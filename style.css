@@ -32,7 +32,7 @@ body { font-family:'Poppins',sans-serif; color:var(--text); background:var(--bg)
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
   color: white;
 }
 
@@ -46,6 +46,25 @@ body { font-family:'Poppins',sans-serif; color:var(--text); background:var(--bg)
   margin: auto;
 }
 
+.menu-doar {
+  background-color: #e0e6e1; /* ou outro tom de destaque */
+  color: #333 !important;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 30px;
+  transition: background 0.3s ease;
+}
+
+.menu-doar:hover {
+  background-color: #87e23d;
+  color: white;
+}
+
+
 .logo img {
   height: 60px;
 }
@@ -53,6 +72,7 @@ body { font-family:'Poppins',sans-serif; color:var(--text); background:var(--bg)
 .nav-links {
   display: flex;
   gap: 30px;
+  align-items: center;
 }
 
 /* Botão de menu hamburguer */
@@ -409,5 +429,20 @@ footer {
     font-size: 14px;
     margin-top: 20px;
   }
+
+  .nav-links {
+    align-items: start;
+  }
+
+  .menu-doar {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+    margin: 20px;
+}
+  .nav-links a:hover {
+    opacity: 0.8;
+}
 
 }

@@ -187,44 +187,49 @@ main { width:100%; margin:auto; }
 
 .hero {
   position: relative;
-  background: url('IMG/banner.jpg') center/cover no-repeat;
   color: white;
   height: 650px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border-radius: 12px; */
-  /* margin-top: 40px; */
   overflow: hidden;
 }
 
-.hero::before {
-  content: '';
+.hero video {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* escurece a imagem */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: 0;
+  filter: brightness(0.2); /* escurece o vídeo para legibilidade */
 }
-
-
 
 .hero-content {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 20px;
 }
+
+.hero-content img{
+  height: 350px;
+  right: 350px;
+}
+
 
 .hero-content h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
+
 
 .hero_contato {
     position: relative;
@@ -394,5 +399,15 @@ footer {
   .contato { width: 100%; }
 
   .doacao { width: 100%; }
+
+  .hero-content img {
+    height: 300px;
+    right: 300px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    margin-top: 20px;
+  }
 
 }

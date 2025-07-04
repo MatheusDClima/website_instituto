@@ -60,7 +60,7 @@ body { font-family:'Poppins',sans-serif; color:var(--text); background:var(--bg)
 }
 
 .menu-doar:hover {
-  background-color: #87e23d;
+  background-color: #91bb6f;
   color: white;
 }
 
@@ -336,6 +336,7 @@ main { width:100%; margin:auto; }
   margin-bottom:30px; 
   margin-top:30px; 
   color:var(--primary);
+  font-size: 30px;
 }
 
 .cards {

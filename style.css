@@ -5,8 +5,29 @@
   --text: #222;
   --white: #fff;
 }
+
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Poppins',sans-serif; color:var(--text); background:var(--bg); }
+
+body { 
+  font-family:'Poppins',sans-serif; 
+  color:var(--text); 
+  background:var(--bg);
+   
+}
+
+
+/* Garante que a página inteira ocupa 100% da altura da tela */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Wrapper principal que empurra o footer para o fim */
+.wrapper {
+  min-height: calc(100vh - 150px); /* 150px é a altura aproximada do footer */
+}
+
 
 
 /*ABRIR A SECTION SUAVEMENTE */

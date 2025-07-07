@@ -94,35 +94,54 @@
 
 
   <!-- AÇÕES -->
-     <section id="projetos">
-      <h2>Nossas Ações</h2>
-      <div class="cards fade-in">
-        <div class="card">
-          <img src="IMG/projeto1.jpg" alt="Ação 1">
-          <div class="card-info">
-            <h3>Sementes Inclusivas</h3>
-            <p>Oficinas lúdicas para crianças com TEA explorarem suas habilidades.</p>
-            <a href="#" class="btn-secondary">Saiba Mais</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="IMG/projeto2.jpg" alt="Ação 2">
-          <div class="card-info">
-            <h3>Capacitação Familiar</h3>
-            <p>Workshops de apoio para pais e responsáveis.</p>
-            <a href="#" class="btn-secondary">Saiba Mais</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="IMG/projeto3.jpg" alt="Ação 3">
-          <div class="card-info">
-            <h3>Inclusão Escolar</h3>
-            <p>Parceria com escolas para adaptar o ensino.</p>
-            <a href="#" class="btn-secondary">Saiba Mais</a>
-          </div>
+     <section class="acoes">
+  <h2>Nossas Ações</h2>
+  <div class="carousel-container">
+    <button class="btn-carousel left" id="btn-esquerda">❮</button>
+
+    <div class="carousel" id="carousel">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="IMG/projeto1.jpg" alt="">
+        <div class="card-body">
+          <h3>Sementes Inclusivas</h3>
+          <p>Oficinas lúdicas para crianças com TEA explorarem suas habilidades.</p>
+          <a href="#" class="btn-saiba">Saiba Mais</a>
         </div>
       </div>
-    </section>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="IMG/projeto2.jpg" alt="">
+        <div class="card-body">
+          <h3>Capacitação Familiar</h3>
+          <p>Workshops de apoio para pais e responsáveis.</p>
+          <a href="#" class="btn-saiba">Saiba Mais</a>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="IMG/projeto3.jpg" alt="">
+        <div class="card-body">
+          <h3>Inclusão Escolar</h3>
+          <p>Parceria com escolas para adaptar o ensino.</p>
+          <a href="#" class="btn-saiba">Saiba Mais</a>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="IMG/equipe.jpg" alt="">
+        <div class="card-body">
+          <h3>Nossa Equipe</h3>
+          <p>Conheça melhor cada membro do time.</p>
+          <a href="#" class="btn-saiba">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-carousel right" id="btn-direita">❯</button>
+  </div>
+</section>
+
   <!-- AÇÕES -->
 
 
@@ -134,18 +153,15 @@
         <div class="texto-doar">
           <h2>Faça a Diferença</h2>
           <p>Contribua com nossa causa e ajude a transformar vidas com inclusão, cuidado e empatia.</p>
-          <a class="btn-video" href="doar.html" id="abrir-video">Como doar</a>
+          <a class="btn-doar" href="doar.html" id="abrir-video">Como doar</a>
         </div>
 
         <div class="imagem-doar">
           <img src="IMG/projeto1.jpg" alt="Ato de doar" />
         </div>
 
-        
-
       </div>
     </section>
-
 
   <!-- BANNER COMO DOAR -->
 
@@ -264,6 +280,49 @@
     observador.observe(el);
   });
 </script>
+
+<!-- CARROSSEL NAS AÇÕES -->
+<script>
+  const carousel = document.getElementById("carousel");
+  const btnEsquerda = document.getElementById("btn-esquerda");
+  const btnDireita = document.getElementById("btn-direita");
+
+  const scrollAmount = 320; // px
+  const autoplayDelay = 3000; // 4 segundos
+  let autoScroll;
+
+  function scrollRight() {
+    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  }
+
+  function startAutoplay() {
+    autoScroll = setInterval(scrollRight, autoplayDelay);
+  }
+
+  function stopAutoplay() {
+    clearInterval(autoScroll);
+  }
+
+  // Inicia autoplay
+  startAutoplay();
+
+  // Para o autoplay ao passar o mouse (opcional)
+  carousel.addEventListener("mouseenter", stopAutoplay);
+  carousel.addEventListener("mouseleave", startAutoplay);
+
+  // Botões manuais continuam funcionando
+  btnEsquerda.addEventListener("click", () => {
+    stopAutoplay();
+    carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+
+  btnDireita.addEventListener("click", () => {
+    stopAutoplay();
+    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
+</script>
+
+
 
 
 </body>

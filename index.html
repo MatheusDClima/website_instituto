@@ -54,7 +54,7 @@
         <!-- <a class="btn-hero" href="#projetos">Conheça nossos projetos</a> -->
       </div>
     </section>
-  <!-- BANNER PRINCIPAL -->
+  <!-- FIM BANNER PRINCIPAL -->
 
 
   <!-- BANNER COM MODAL DE VÍDEO -->
@@ -66,7 +66,7 @@
 
       </div>
     </section>
-  <!-- BANNER COM MODAL DE VÍDEO -->
+  <!-- FIM BANNER COM MODAL DE VÍDEO -->
  
 
   <!-- BANNER PROJETOS -->
@@ -78,7 +78,7 @@
 
       </div>
     </section>
-  <!-- BANNER PROJETOS -->
+  <!-- FIM BANNER PROJETOS -->
 
 
   <!-- BANNER CONTATO -->
@@ -90,7 +90,7 @@
 
       </div>
     </section>
-  <!-- BANNER CONTATO -->
+  <!-- FIM BANNER CONTATO -->
 
 
   <!-- AÇÕES -->
@@ -142,7 +142,7 @@
   </div>
 </section>
 
-  <!-- AÇÕES -->
+  <!-- FIM AÇÕES -->
 
 
   <!-- BANNER COMO DOAR -->
@@ -163,7 +163,7 @@
       </div>
     </section>
 
-  <!-- BANNER COMO DOAR -->
+  <!-- FIM BANNER COMO DOAR -->
 
     <!-- <section id="impacto" class="impacto">
       <div class="impacto-item"><strong>200+</strong><span>Crianças atendidas</span></div>
@@ -214,7 +214,7 @@
     <p>&copy; 2025 Instituto Esperança. Todos os direitos reservados.</p>
   </div>
 
-<!-- RODAPÉ -->
+<!-- FIM RODAPÉ -->
 
 
 
@@ -292,7 +292,15 @@
   let autoScroll;
 
   function scrollRight() {
-    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    // Verifica se chegou ao final
+    const atEnd = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 5;
+    if (atEnd) {
+      // Volta para o início suavemente
+      carousel.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      // Scroll normal
+      carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
   }
 
   function startAutoplay() {
@@ -302,7 +310,6 @@
   function stopAutoplay() {
     clearInterval(autoScroll);
   }
-
   // Inicia autoplay
   startAutoplay();
 

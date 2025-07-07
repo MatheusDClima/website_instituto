@@ -388,6 +388,183 @@ main { width:100%; margin:auto; }
 }
 .btn-video:hover { background:#fff; }
 
+/*=============== CONTATOS ================*/
+
+.contato {
+  background: linear-gradient(135deg, #f4faff, #e1f3ff);
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contato h2 {
+  font-size: 1.8rem;
+  color: #0077cc;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form-contato {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  outline: none;
+  border-color: #00c2ff;
+  box-shadow: 0 0 5px rgba(0, 194, 255, 0.3);
+}
+
+.form-contato button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 14px;
+  /* width: 50%; */
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.form-contato button:hover {
+  background-color: #005fa3;
+  transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+  .form-contato {
+    padding: 30px 20px;
+  }
+
+  .contato h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============== PÁGINA DOAÇÃO =============== */
+.doacao {
+  background: linear-gradient(135deg, #e8f4ff, #fefeff);
+  padding: 60px 30px;
+  border-radius: 16px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0, 119, 204, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.doacao h2 {
+  font-size: 1.8rem;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.doacao img {
+  max-width: 240px;
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.doacao img:hover {
+  transform: scale(1.03);
+}
+
+.doacao p {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.doacao strong {
+  color: #0077cc;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .doacao {
+    padding: 40px 20px;
+  }
+
+  .doacao h2 {
+    font-size: 1.5rem;
+  }
+
+  .doacao p {
+    font-size: 1rem;
+  }
+
+  .doacao img {
+    max-width: 180px;
+  }
+}
+
+.btn-copiar {
+  margin-top: 15px;
+  background-color: #0077cc;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-copiar:hover {
+  background-color: #005fa3;
+  transform: scale(1.03);
+}
+
+.copiado-msg {
+  display: none;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #28a745;
+  font-weight: 600;
+}
+
+/* Animação suave ao entrar na tela */
+.doacao {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.doacao.aparecer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
 /* ============== AÇÕES ==============*/
 
 .acoes {

@@ -32,11 +32,18 @@
 
 </header>
 
-    <section id="doar" class="doacao">
-      <h2>Ajude nossa causa</h2>
-      <img src="IMG/qrbg.png" alt="Doação via Pix">
-      <p>Chave Pix: <strong>institutoesperanca@pix.com.br</strong></p>
-    </section>
+<main>
+
+  <section id="doar" class="doacao">
+    <h2>Ajude nossa causa</h2>
+    <img src="IMG/qrbg.png" alt="Doação via Pix">
+    <p>Chave Pix: <strong id="chave-pix">institutoesperanca@pix.com.br</strong></p>
+    <button class="btn-copiar" id="copiar-pix">Copiar Chave Pix</button>
+    <span id="feedback-copiar" class="copiado-msg">Copiado!</span>
+  </section>
+
+</main>
+
 
     <!-- RODAPÉ -->
   <footer class="footer">
@@ -78,6 +85,8 @@
 
 <!-- RODAPÉ -->
 
+
+<!--  MENU MOBILE -->
     <script>
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
@@ -86,6 +95,39 @@
     navLinks.classList.toggle('show');
   });
 </script>
+
+
+<!-- copiar + animação -->
+<script>
+  // Copiar chave Pix
+  const btnCopiar = document.getElementById("copiar-pix");
+  const chavePix = document.getElementById("chave-pix");
+  const feedback = document.getElementById("feedback-copiar");
+
+  btnCopiar.addEventListener("click", () => {
+    navigator.clipboard.writeText(chavePix.textContent).then(() => {
+      feedback.style.display = "inline";
+      setTimeout(() => {
+        feedback.style.display = "none";
+      }, 2000);
+    });
+  });
+
+  // Animação suave ao entrar na tela
+  const secDoacao = document.querySelector(".doacao");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        secDoacao.classList.add("aparecer");
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  observer.observe(secDoacao);
+</script>
+
 
 </body>
 </html>

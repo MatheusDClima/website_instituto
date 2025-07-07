@@ -53,6 +53,7 @@ html, body {
   z-index: 1000;
   background: linear-gradient(135deg, var(--secondary), var(--primary));
   color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* Menu padrão */
@@ -79,7 +80,7 @@ html, body {
 }
 
 .menu-doar:hover {
-  background-color: #91bb6f;
+  background-color: #eece18;
   color: white;
 }
 
@@ -93,6 +94,21 @@ html, body {
   gap: 30px;
   align-items: center;
 }
+
+.nav-links a.active {
+  color: rgb(255, 210, 7);
+  font-weight: bold;
+  border-bottom: 1px solid rgb(211, 210, 206);
+}
+
+@media (max-width: 768px) {
+  .nav-links a.active {
+    background-color: rgba(2, 15, 26, 0.3);
+    border-left: 2px solid var(--primary);
+    padding-left: 12px;
+  }
+}
+
 
 /* Botão de menu hamburguer */
 .menu-toggle {
@@ -109,10 +125,10 @@ html, body {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 .nav-links a:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 
@@ -225,7 +241,7 @@ main { width:100%; margin:auto; }
   }
 
   .hero {
-    height: 450px !important;
+    height: 530px !important;
   }
 
   .hero-content {
@@ -278,7 +294,7 @@ main { width:100%; margin:auto; }
 
 .hero-content img{
   height: 350px;
-  right: 350px;
+  width: 350px;
 }
 
 
@@ -398,7 +414,7 @@ main { width:100%; margin:auto; }
 
 .hero_projetos {
     position: relative;
-  background: url('IMG/projeto1.jpg') center/cover no-repeat;
+  background: url('IMG/projeto3.jpg') center/cover no-repeat;
   color: white;
   height: 650px;
   display: flex;
@@ -414,13 +430,13 @@ main { width:100%; margin:auto; }
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* escurece a imagem */
+  background: rgba(0, 0, 0, 0.8); /* escurece a imagem */
   z-index: 0;
 }
 
 .hero_sobre {
     position: relative;
-  background: url('IMG/projeto2.jpg') center/cover no-repeat;
+  background: url('IMG/textura_contato.avif') center/cover no-repeat;
   color: white;
   height: 650px;
   display: flex;
@@ -436,7 +452,7 @@ main { width:100%; margin:auto; }
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* escurece a imagem */
+  background: rgba(0, 0, 0, 0.5); /* escurece a imagem */
   z-index: 0;
 }
 
@@ -703,7 +719,7 @@ main { width:100%; margin:auto; }
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(11, 163, 201, 0.8);
+  /* background: rgba(11, 163, 201, 0.8); */
   color: rgb(3, 31, 56);
   border: none;
   font-size: 1rem;
@@ -835,8 +851,8 @@ main { width:100%; margin:auto; }
   .doacao { width: 100%; }
 
   .hero-content img {
-    height: 300px;
-    right: 300px;
+    height: 280px;
+    width: 280px;
   }
 
   .hero-content h2 {
@@ -855,8 +871,6 @@ main { width:100%; margin:auto; }
     /* margin-top: 10px; */
     /* padding: 10px 10px; */
 }
-
-
 
   .nav-links a:hover {
     opacity: 0.8;

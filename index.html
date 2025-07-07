@@ -234,10 +234,25 @@
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
-  menuToggle.addEventListener('click', () => {
+  // Alterna o menu quando clica no ícone
+  menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // Impede que o clique propague para o body
     navLinks.classList.toggle('show');
   });
+
+  // Fecha o menu ao clicar fora
+  document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('show') && !navLinks.contains(e.target)) {
+      navLinks.classList.remove('show');
+    }
+  });
+
+  // Impede o clique dentro do menu de fechar ele
+  navLinks.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
 </script>
+
 
 
 <!-- MODAL PARA APARECER O VÍDEO -->

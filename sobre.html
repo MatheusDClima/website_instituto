@@ -69,48 +69,52 @@
 
     <section class="time">
   <h2>Nosso Time</h2>
-  <div class="time-cards fade-in">
-    <div class="card-membro">
-      <img src="IMG/membro1.png" alt="Maria Souza">
-      <h3>Maria Souza</h3>
-      <p>Presidente do Instituto</p>
-      <div class="redes-sociais">
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </div>
-    <div class="card-membro">
-      <img src="IMG/membro2.avif" alt="João Silva">
-      <h3>João Silva</h3>
-      <p>Coordenador de Projetos</p>
-      <div class="redes-sociais">
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </div>
-    <div class="card-membro">
-      <img src="IMG/membro3.png" alt="Carla Lima">
-      <h3>Carla Lima</h3>
-      <p>Psicóloga</p>
-      <div class="redes-sociais">
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </div>
-    <div class="card-membro">
-      <img src="IMG/membro4.avif" alt="Ana Carla">
-      <h3>Ana Carla</h3>
-      <p>Analista de Comunicação</p>
-      <div class="redes-sociais">
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </div>
+  <div class="carrossel-time fade-in">
+    <button class="seta-time esquerda">&#10094;</button>
+    <div class="time-cards fade-in">
+        <div class="card-membro">
+          <img src="IMG/membro1.png" alt="Maria Souza">
+          <h3>Maria Souza</h3>
+          <p>Presidente do Instituto</p>
+          <div class="redes-sociais">
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="card-membro">
+          <img src="IMG/membro2.avif" alt="João Silva">
+          <h3>João Silva</h3>
+          <p>Coordenador de Projetos</p>
+          <div class="redes-sociais">
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="card-membro">
+          <img src="IMG/membro3.png" alt="Carla Lima">
+          <h3>Carla Lima</h3>
+          <p>Psicóloga</p>
+          <div class="redes-sociais">
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="card-membro">
+          <img src="IMG/membro4.avif" alt="Ana Carla">
+          <h3>Ana Carla</h3>
+          <p>Analista de Comunicação</p>
+          <div class="redes-sociais">
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
     <!-- Adicione mais cards conforme necessário -->
+     </div>
+        <button class="seta-time direita">&#10095;</button>
   </div>
 </section>
 
@@ -199,6 +203,22 @@
     observador.observe(el);
   });
 </script>
+
+<!-- CARROSSEL DOS MEMBROS DO TIME -->
+<script>
+  const container = document.querySelector('.time-cards');
+  const btnEsquerda = document.querySelector('.seta-time.esquerda');
+  const btnDireita = document.querySelector('.seta-time.direita');
+
+  btnEsquerda.addEventListener('click', () => {
+    container.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
+  btnDireita.addEventListener('click', () => {
+    container.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+</script>
+
 
     </body>
     </html>

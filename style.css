@@ -951,3 +951,127 @@ main { width:100%; margin:auto; }
   }
 
 }
+
+/* ================ PÁGINA SOBRE ===================*/
+
+.sobre-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  /* width: 100%;   */
+}
+
+.sobre-bloco {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 40px;
+  /* background: url(IMG/textura_contato.avif); */
+}
+
+.sobre-img img {
+  width: 100%;
+  max-width: 500px;
+  /* border-radius: 12px; */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.sobre-texto {
+  flex: 1;
+}
+
+.sobre-texto h2 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  color: var(--primary, #0077cc);
+}
+
+.sobre-texto p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Inverter layout */
+.sobre-bloco.inverso {
+  flex-direction: row-reverse;
+}
+
+/* NOSSO TIME */
+.time {
+  text-align: center;
+  padding: 60px 20px;
+  /* background: #fff; */
+}
+
+.time h2 {
+  font-size: 2rem;
+  color: var(--primary, #0077cc);
+  margin-bottom: 40px;
+}
+
+.time-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card-membro {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  max-width: 240px;
+  min-width: 240px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-membro:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-membro img {
+  width: 100%;
+  max-width: 140px;
+  min-width: 140px;
+  max-height: 130px;
+  min-height: 130px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-membro h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.card-membro p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sobre-bloco,
+  .sobre-bloco.inverso {
+    flex-direction: column;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    gap: 20px;
+    
+  }
+
+  .sobre-img img {
+    max-width: 100%;
+  }
+
+  .time-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

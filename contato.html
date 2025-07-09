@@ -35,7 +35,7 @@
 
     <section id="contato" class="contato">
       <h2>Fale Conosco</h2>
-      <form action="#" class="form-contato">
+      <form action="#" class="form-contato fade-in">
         <input type="text" placeholder="Nome" required>
         <input type="email" placeholder="E-mail" required>
         <textarea placeholder="Sua mensagem" rows="5" required></textarea>
@@ -44,7 +44,7 @@
     </section>
 
     <!-- RODAPÉ -->
-  <footer class="footer">
+  <footer class="footer fade-in">
   <div class="footer-container">
     <div class="footer-col">
       <h3>Sobre o Instituto</h3>
@@ -107,6 +107,23 @@
   // Impede o clique dentro do menu de fechar ele
   navLinks.addEventListener('click', (e) => {
     e.stopPropagation();
+  });
+</script>
+
+<!-- A SECTION APARECE SUAVEMENTE -->
+<script>
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visible');
+        // Para animar só uma vez:
+        observador.unobserve(entrada.target);
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in').forEach((el) => {
+    observador.observe(el);
   });
 </script>
 

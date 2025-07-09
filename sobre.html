@@ -38,7 +38,7 @@
 <!-- MAIN -->
 
     <main class="sobre-container">
-    <section class="sobre-bloco">
+    <section class="sobre-bloco fade-in">
       <div class="sobre-img">
         <img src="IMG/projeto1.jpg" alt="Nossa missão" />
       </div>
@@ -52,7 +52,7 @@
       </div>
     </section>
 
-    <section class="sobre-bloco inverso">
+    <section class="sobre-bloco inverso fade-in">
       <div class="sobre-img">
         <img src="IMG/projeto2.jpg" alt="Nosso trabalho" />
       </div>
@@ -68,7 +68,7 @@
 
     <section class="time">
   <h2>Nosso Time</h2>
-  <div class="time-cards">
+  <div class="time-cards fade-in">
     <div class="card-membro">
       <img src="IMG/membro1.png" alt="Maria Souza">
       <h3>Maria Souza</h3>
@@ -99,7 +99,7 @@
 
 
 <!-- RODAPÉ -->
-  <footer class="footer">
+  <footer class="footer fade-in">
   <div class="footer-container">
     <div class="footer-col">
       <h3>Sobre o Instituto</h3>
@@ -159,6 +159,23 @@
   // Impede o clique dentro do menu de fechar ele
   navLinks.addEventListener('click', (e) => {
     e.stopPropagation();
+  });
+</script>
+
+<!-- A SECTION APARECE SUAVEMENTE -->
+<script>
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visible');
+        // Para animar só uma vez:
+        observador.unobserve(entrada.target);
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in').forEach((el) => {
+    observador.observe(el);
   });
 </script>
 

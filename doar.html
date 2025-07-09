@@ -35,7 +35,7 @@
 
 <main>
 
-  <section id="doar" class="doacao">
+  <section id="doar" class="doacao fade-in">
     <h2>Ajude nossa causa</h2>
     <img src="IMG/qrbg.png" alt="Doação via Pix">
     <p>Chave Pix: <strong id="chave-pix">institutoesperanca@pix.com.br</strong></p>
@@ -47,7 +47,7 @@
 
 
     <!-- RODAPÉ -->
-  <footer class="footer">
+  <footer class="footer fade-in">
   <div class="footer-container">
     <div class="footer-col">
       <h3>Sobre o Instituto</h3>
@@ -141,6 +141,23 @@
   });
 
   observer.observe(secDoacao);
+</script>
+
+<!-- A SECTION APARECE SUAVEMENTE -->
+<script>
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visible');
+        // Para animar só uma vez:
+        observador.unobserve(entrada.target);
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in').forEach((el) => {
+    observador.observe(el);
+  });
 </script>
 
 

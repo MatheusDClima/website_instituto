@@ -956,7 +956,7 @@ main { width:100%; margin:auto; }
 
 .sobre-container {
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 30px auto;
   padding: 0 20px;
   /* width: 100%;   */
 }
@@ -1004,7 +1004,7 @@ main { width:100%; margin:auto; }
 }
 
 .time h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--primary, #0077cc);
   margin-bottom: 40px;
 }

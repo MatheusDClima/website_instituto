@@ -11,7 +11,7 @@
 body { 
   font-family:'Poppins',sans-serif; 
   color:var(--text); 
-  background:var(--bg);
+  background:#e6f2ff;
    
 }
 
@@ -657,7 +657,7 @@ main { width:100%; margin:auto; }
 
 .acoes {
   padding: 60px 20px;
-  background-color: #eaeaea;
+  background-color: #e6f2ff;
   text-align: center;
 }
 
@@ -683,8 +683,8 @@ main { width:100%; margin:auto; }
 }
 
 .card {
-  min-width: 400px;
-  max-width: 400px;
+  min-width: 300px;
+  max-width: 300px;
   background-color: white;
   border-radius: 12px;
   overflow: hidden;
@@ -958,6 +958,7 @@ main { width:100%; margin:auto; }
   max-width: 1200px;
   margin: 30px auto;
   padding: 0 20px;
+  
   /* width: 100%;   */
 }
 
@@ -987,7 +988,7 @@ main { width:100%; margin:auto; }
 }
 
 .sobre-texto p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.6;
 }
 
@@ -1017,9 +1018,9 @@ main { width:100%; margin:auto; }
 }
 
 .card-membro {
-  background: #f9f9f9;
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
   max-width: 240px;
   min-width: 240px;
@@ -1044,15 +1045,43 @@ main { width:100%; margin:auto; }
 }
 
 .card-membro h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #333;
   margin-bottom: 6px;
 }
 
 .card-membro p {
-  font-size: 0.95rem;
+  font-size: 0.90rem;
   color: #555;
 }
+
+.redes-sociais {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.redes-sociais a {
+  text-decoration: none; /* remove a linha */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--primary, #0077cc);
+  color: white;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.2s;
+  
+}
+
+.redes-sociais a:hover {
+  background-color: var(--secondary, #00c2ff);
+  transform: scale(1.1);
+}
+
 
 /* Responsivo */
 @media (max-width: 768px) {
@@ -1063,15 +1092,37 @@ main { width:100%; margin:auto; }
     background: white;
     border-radius: 12px;
     gap: 20px;
-    
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   }
 
   .sobre-img img {
     max-width: 100%;
   }
 
+  .sobre-texto p {
+    font-size: 0.8rem;
+  }
+
+  .sobre-texto h2 {
+    font-size: 1.4rem;
+  }
+
   .time-cards {
     flex-direction: column;
     align-items: center;
   }
+
+  .time h2 {
+  font-size: 1.6rem;
+  }
+
+  .card-membro h3 {
+  font-size: 1rem;
+  
+}
+
+  .card-membro p {
+  font-size: 0.85rem;
+  
+}
 }

@@ -104,7 +104,7 @@ html, body {
   border-bottom: 1.5px solid rgb(211, 210, 206);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 695px) {
   .nav-links a.active {
     background-color: rgba(2, 15, 26, 0);
     border-left: 2px solid var(--primary);
@@ -237,7 +237,7 @@ main { width:100%; margin:auto; }
   filter: brightness(0.2); /* escurece o vídeo para legibilidade */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1130px) {
   .header-content {
     padding: 15px 20px;
   }
@@ -594,7 +594,7 @@ main { width:100%; margin:auto; }
   font-size: 1rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .doacao {
     padding: 40px 20px;
   }
@@ -835,7 +835,7 @@ main { width:100%; margin:auto; }
 
 
 /* RESPONSIVO */
-@media (max-width: 768px) {
+@media (max-width: 695px) {
   .menu-toggle {
     display: block;
   }
@@ -1120,7 +1120,7 @@ main { width:100%; margin:auto; }
 
 
 /* Responsivo */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .sobre-bloco,
   .sobre-bloco.inverso {
     flex-direction: column;

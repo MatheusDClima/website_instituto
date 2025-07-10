@@ -248,12 +248,13 @@ main { width:100%; margin:auto; }
   }
 
   .hero {
-    height: 530px !important;
+    height: 650px !important;
   }
 
   .hero-content {
     padding: 0 20px;
     text-align: center;
+    
   }
 
   .hero-content h1,
@@ -375,7 +376,7 @@ main { width:100%; margin:auto; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  display: inline;
 }
 
 .btn-doar {
@@ -886,8 +887,7 @@ main { width:100%; margin:auto; }
 
   .menu-doar {
     margin: 10px 0 10px 0;
-    /* margin-top: 10px; */
-    /* padding: 10px 10px; */
+    
 }
 
   .nav-links a:hover {
@@ -898,6 +898,7 @@ main { width:100%; margin:auto; }
   .hero-content-doar {
     flex-direction: column;
     text-align: center;
+    /* align-items: center; */
   }
 
   .texto-doar, .imagem-doar {
@@ -905,7 +906,8 @@ main { width:100%; margin:auto; }
   }
 
   .imagem-doar img {
-    max-height: 250px;
+    max-height: 280px;
+    max-width: 500px;
   }
 
   .footer-bottom {
@@ -940,8 +942,8 @@ main { width:100%; margin:auto; }
     padding: 10px 20px;
     font-size: 1rem;
     /* align-items: center;*/
-    width: 100%;
-    
+    width: 50%;
+    margin: 5px auto;
   }
 
   .imagem-doar {
@@ -960,7 +962,7 @@ main { width:100%; margin:auto; }
 
 .sobre-container {
   max-width: 1200px;
-  margin: 30px auto;
+  margin: 60px auto;
   padding: 0 20px;
   
   /* width: 100%;   */
@@ -986,7 +988,7 @@ main { width:100%; margin:auto; }
 }
 
 .sobre-texto h2 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin-bottom: 16px;
   color: var(--primary, #0077cc);
 }
@@ -1003,13 +1005,13 @@ main { width:100%; margin:auto; }
 
 /* NOSSO TIME */
 .time {
-  padding: 60px 20px;
+  padding: 60px 20px 5px;
   /* background-color: #f5faff; */
   text-align: center;
 }
 
 .time h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 30px;
   color: var(--primary, #0077cc);
 }
@@ -1200,7 +1202,7 @@ main { width:100%; margin:auto; }
 }
 
 .projeto-content h2 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin-bottom: 15px;
   color: var(--primary);
 }
@@ -1217,7 +1219,7 @@ main { width:100%; margin:auto; }
   padding: 10px 20px;
   border-radius: 30px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
   transition: background 0.3s;
 }
 

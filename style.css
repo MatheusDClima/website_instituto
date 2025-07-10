@@ -62,7 +62,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 15px 265px;
   max-width: 1200px;
   margin: auto;
 }
@@ -101,7 +101,7 @@ html, body {
 .nav-links a.active {
   color: rgb(255, 210, 7);
   font-weight: bold;
-  border-bottom: 1px solid rgb(211, 210, 206);
+  border-bottom: 1.5px solid rgb(211, 210, 206);
 }
 
 @media (max-width: 768px) {
@@ -238,6 +238,10 @@ main { width:100%; margin:auto; }
 }
 
 @media (max-width: 768px) {
+  .header-content {
+    padding: 15px 20px;
+  }
+
   /* Reduz espaçamentos */
   section {
     padding: 30px 16px !important;

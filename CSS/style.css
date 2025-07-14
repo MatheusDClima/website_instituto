@@ -96,6 +96,7 @@ html, body {
   display: flex;
   gap: 30px;
   align-items: center;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
 .nav-links a.active {
@@ -841,15 +842,18 @@ main { width:100%; margin:auto; }
   }
 
   .nav-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: var(--primary);
     flex-direction: column;
+    background: var(--primary);
+    position: absolute;
+    top: 90px; /* altura do header */
+    left: 0;
     width: 100%;
-    display: none;
-    align-items: flex-start;
-    gap: 0px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    z-index: 999;
+    padding: 0;
+    gap: 0;
   }
 
   .nav-links a {
@@ -860,6 +864,9 @@ main { width:100%; margin:auto; }
 
   .nav-links.show {
     display: flex;
+    max-height: 410px; /* ou use 'fit-content' com cuidado */
+    opacity: 1;
+    padding: 10px 0;
   }
 
   .impacto { flex-direction:column; gap:30px; }

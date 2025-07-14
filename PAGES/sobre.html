@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../CSS/style.css">
         <title>Sobre nós</title>
     </head>
 
@@ -15,8 +15,8 @@
     <header class="top-header">
     <div class="container header-content">
         <div class="logo">
-        <a href="index.html">
-        <img src="IMG/logo.png" alt="Instituto Esperança" />
+        <a href="../index.html">
+        <img src="../IMG/logo.png" alt="Instituto Esperança" />
       </a>
         </div>
 
@@ -25,11 +25,11 @@
         </button>
 
         <nav class="nav-links">
-            <a href="index.html">Início</a>
-            <a href="sobre.html" class="active">Sobre</a>
-            <a href="projetos.html">Projetos</a>
-            <a href="contato.html">Contato</a>
-            <a href="doar.html" class="menu-doar">🤝 QUERO DOAR</a>
+            <a href="../index.html">Início</a>
+            <a href="../PAGES/sobre.html" class="active">Sobre</a>
+            <a href="../PAGES/projetos.html">Projetos</a>
+            <a href="../PAGES/contato.html">Contato</a>
+            <a href="../PAGES/doar.html" class="menu-doar">🤝 QUERO DOAR</a>
         </nav>
     </div>
 
@@ -41,7 +41,7 @@
     <main class="sobre-container">
     <section class="sobre-bloco fade-in">
       <div class="sobre-img">
-        <img src="IMG/projeto1.jpg" alt="Nossa missão" />
+        <img src="../IMG/projeto1.jpg" alt="Nossa missão" />
       </div>
       <div class="sobre-texto">
         <h2>Nossa Missão</h2>
@@ -55,7 +55,7 @@
 
     <section class="sobre-bloco inverso fade-in">
       <div class="sobre-img">
-        <img src="IMG/projeto2.jpg" alt="Nosso trabalho" />
+        <img src="../IMG/projeto2.jpg" alt="Nosso trabalho" />
       </div>
       <div class="sobre-texto">
         <h2>Nosso Trabalho</h2>
@@ -73,7 +73,7 @@
     <button class="seta-time esquerda">&#10094;</button>
     <div class="time-cards fade-in">
         <div class="card-membro">
-          <img src="IMG/membro1.png" alt="Maria Souza">
+          <img src="../IMG/membro1.png" alt="Maria Souza">
           <h3>Maria Souza</h3>
           <p>Presidente do Instituto</p>
           <div class="redes-sociais">
@@ -83,7 +83,7 @@
           </div>
         </div>
         <div class="card-membro">
-          <img src="IMG/membro2.avif" alt="João Silva">
+          <img src="../IMG/membro2.avif" alt="João Silva">
           <h3>João Silva</h3>
           <p>Coordenador de Projetos</p>
           <div class="redes-sociais">
@@ -93,7 +93,7 @@
           </div>
         </div>
         <div class="card-membro">
-          <img src="IMG/membro3.png" alt="Carla Lima">
+          <img src="../IMG/membro3.png" alt="Carla Lima">
           <h3>Carla Lima</h3>
           <p>Psicóloga</p>
           <div class="redes-sociais">
@@ -103,7 +103,7 @@
           </div>
         </div>
         <div class="card-membro">
-          <img src="IMG/membro4.avif" alt="Ana Carla">
+          <img src="../IMG/membro4.avif" alt="Ana Carla">
           <h3>Ana Carla</h3>
           <p>Analista de Comunicação</p>
           <div class="redes-sociais">
@@ -134,11 +134,11 @@
     <div class="footer-col">
       <h3>Links úteis</h3>
       <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="doar.html">Doar</a></li>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../PAGES/sobre.html">Sobre</a></li>
+        <li><a href="../PAGES/projetos.html">Projetos</a></li>
+        <li><a href="../PAGES/contato.html">Contato</a></li>
+        <li><a href="../PAGES/doar.html">Doar</a></li>
       </ul>
     </div>
 
@@ -150,9 +150,9 @@
     <div class="footer-col">
       <h3>Redes Sociais</h3>
       <div class="social-links">
-        <a href="#"><img src="ICONS/instagram.png" alt="Instagram"></a>
-        <a href="#"><img src="ICONS/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="ICONS/youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="../ICONS/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="../ICONS/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="../ICONS/youtube.png" alt="YouTube"></a>
       </div>
     </div>
   </div>
@@ -161,64 +161,12 @@
   <p>&copy; 2025 Instituto Esperança. Todos os direitos reservados.</p>
 </div>
 
-<!-- RODAPÉ -->
+<!-- FIM RODAPÉ -->
 
-    <!-- ABRIR MENU MOBILE -->
-  <script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
 
-  // Alterna o menu quando clica no ícone
-  menuToggle.addEventListener('click', (e) => {
-    e.stopPropagation(); // Impede que o clique propague para o body
-    navLinks.classList.toggle('show');
-  });
-
-  // Fecha o menu ao clicar fora
-  document.addEventListener('click', (e) => {
-    if (navLinks.classList.contains('show') && !navLinks.contains(e.target)) {
-      navLinks.classList.remove('show');
-    }
-  });
-
-  // Impede o clique dentro do menu de fechar ele
-  navLinks.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
-</script>
-
-<!-- A SECTION APARECE SUAVEMENTE -->
-<script>
-  const observador = new IntersectionObserver((entradas) => {
-    entradas.forEach((entrada) => {
-      if (entrada.isIntersecting) {
-        entrada.target.classList.add('visible');
-        // Para animar só uma vez:
-        observador.unobserve(entrada.target);
-      }
-    });
-  });
-
-  document.querySelectorAll('.fade-in').forEach((el) => {
-    observador.observe(el);
-  });
-</script>
-
-<!-- CARROSSEL DOS MEMBROS DO TIME -->
-<script>
-  const container = document.querySelector('.time-cards');
-  const btnEsquerda = document.querySelector('.seta-time.esquerda');
-  const btnDireita = document.querySelector('.seta-time.direita');
-
-  btnEsquerda.addEventListener('click', () => {
-    container.scrollBy({ left: -300, behavior: 'smooth' });
-  });
-
-  btnDireita.addEventListener('click', () => {
-    container.scrollBy({ left: 300, behavior: 'smooth' });
-  });
-</script>
-
+<script src="../JS/script.js"></script>
 
     </body>
+
+
     </html>

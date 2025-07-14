@@ -321,7 +321,7 @@ main { width:100%; margin:auto; }
 
 /* BANNER DOAR */
 .hero-doar {
-  background: url('IMG/textura_contato.avif') center/cover no-repeat;
+  background: url('../IMG/textura_contato.avif') center/cover no-repeat;
   height: 500px;
   display: flex;
   align-items: stretch;
@@ -400,7 +400,7 @@ main { width:100%; margin:auto; }
 
 .hero_contato {
     position: relative;
-  background: url('IMG/textura_contato.avif') center/cover no-repeat;
+  background: url('../IMG/textura_contato.avif') center/cover no-repeat;
   color: white;
   height: 650px;
   display: flex;
@@ -422,7 +422,7 @@ main { width:100%; margin:auto; }
 
 .hero_projetos {
     position: relative;
-  background: url('IMG/projeto3.jpg') center/cover no-repeat;
+  background: url('../IMG/projeto3.jpg') center/cover no-repeat;
   color: white;
   height: 650px;
   display: flex;
@@ -444,7 +444,7 @@ main { width:100%; margin:auto; }
 
 .hero_sobre {
     position: relative;
-  background: url('IMG/textura_contato.avif') center/cover no-repeat;
+  background: url('../IMG/textura_contato.avif') center/cover no-repeat;
   color: white;
   height: 650px;
   display: flex;
@@ -973,7 +973,7 @@ main { width:100%; margin:auto; }
   align-items: center;
   margin-bottom: 30px;
   gap: 40px;
-  /* background: url(IMG/textura_contato.avif); */
+  /* background: url(../IMG/textura_contato.avif); */
 }
 
 .sobre-img img {

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Instituto Esperança - Autismo</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="CSS/style.css"/>
 </head>
 <body>
 
@@ -16,7 +16,7 @@
   <div class="container header-content">
     <div class="logo">
       <a href="index.html">
-        <img src="IMG/logo.png" alt="Instituto Esperança" />
+      <img src="IMG/logo.png" alt="Instituto Esperança" />
       </a>
     </div>
 
@@ -27,10 +27,10 @@
 
     <nav class="nav-links">
       <a href="index.html" class="active">Início</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="projetos.html">Projetos</a>
-      <a href="contato.html">Contato</a>
-      <a href="doar.html" class="menu-doar">🤝 QUERO DOAR</a>
+      <a href="PAGES/sobre.html">Sobre</a>
+      <a href="PAGES/projetos.html">Projetos</a>
+      <a href="PAGES/contato.html">Contato</a>
+      <a href="PAGES/doar.html" class="menu-doar">🤝 QUERO DOAR</a>
     </nav>
   </div>
 
@@ -61,7 +61,7 @@
       <div class="hero-content">
         <h2> Conheça o Instituto Esperança</h2>
         <p>Descubra mais sobre nossos projetos e serviços.</p>
-        <a class="btn-video" href="sobre.html" id="abrir-video">Assista ao Vídeo</a>
+        <a class="btn-video" href="PAGES/sobre.html" id="abrir-video">Assista ao Vídeo</a>
 
       </div>
     </section>
@@ -73,7 +73,7 @@
       <div class="hero-content">
         <h2>Projetos</h2>
         <p>Confira nossos projetos realizados.</p>
-        <a class="btn-video" href="projetos.html" id="abrir-video">Saiba mais</a>
+        <a class="btn-video" href="PAGES/projetos.html" id="abrir-video">Saiba mais</a>
 
       </div>
     </section>
@@ -85,7 +85,7 @@
       <div class="hero-content">
         <h2>Quer saber mais sobre o Instituto?</h2>
         <p>Entre em contato conosco e nos conheça melhor!</p>
-        <a class="btn-video" href="contato.html" id="abrir-video">Contato</a>
+        <a class="btn-video" href="PAGES/contato.html" id="abrir-video">Contato</a>
 
       </div>
     </section>
@@ -152,7 +152,7 @@
         <div class="texto-doar">
           <h2>Faça a Diferença</h2>
           <p>Contribua com nossa causa e ajude a transformar vidas com inclusão, cuidado e empatia.</p>
-          <a class="btn-doar" href="doar.html" id="abrir-video">Como doar</a>
+          <a class="btn-doar" href="PAGES/doar.html" id="abrir-video">Como doar</a>
         </div>
 
         <div class="imagem-doar">
@@ -186,10 +186,10 @@
       <h3>Links úteis</h3>
       <ul>
         <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="doar.html">Doar</a></li>
+        <li><a href="PAGES/sobre.html">Sobre</a></li>
+        <li><a href="PAGES/projetos.html">Projetos</a></li>
+        <li><a href="PAGES/contato.html">Contato</a></li>
+        <li><a href="PAGES/doar.html">Doar</a></li>
       </ul>
     </div>
 
@@ -215,136 +215,7 @@
 
 <!-- FIM RODAPÉ -->
 
-
-
-  <!-- Modal de vídeo -->
-<div id="modal-video" class="modal">
-  <div class="modal-content">
-    <span class="fechar-modal" id="fechar-video">&times;</span>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/watch?v=y-_Ly5Tqggc" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-
-
-  <!-- ABRIR MENU MOBILE -->
-  <script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  // Alterna o menu quando clica no ícone
-  menuToggle.addEventListener('click', (e) => {
-    e.stopPropagation(); // Impede que o clique propague para o body
-    navLinks.classList.toggle('show');
-  });
-
-  // Fecha o menu ao clicar fora
-  document.addEventListener('click', (e) => {
-    if (navLinks.classList.contains('show') && !navLinks.contains(e.target)) {
-      navLinks.classList.remove('show');
-    }
-  });
-
-  // Impede o clique dentro do menu de fechar ele
-  navLinks.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
-</script>
-
-
-
-<!-- MODAL PARA APARECER O VÍDEO -->
-<script>
-  const abrirVideoBtn = document.getElementById('abrir-video');
-  const fecharVideoBtn = document.getElementById('fechar-video');
-  const modalVideo = document.getElementById('modal-video');
-
-  abrirVideoBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    modalVideo.style.display = 'flex';
-  });
-
-  fecharVideoBtn.addEventListener('click', function() {
-    modalVideo.style.display = 'none';
-    modalVideo.querySelector('iframe').src = modalVideo.querySelector('iframe').src; // reinicia o vídeo
-  });
-
-  window.addEventListener('click', function(e) {
-    if (e.target === modalVideo) {
-      modalVideo.style.display = 'none';
-      modalVideo.querySelector('iframe').src = modalVideo.querySelector('iframe').src;
-    }
-  });
-</script>
-
-<!-- A SECTION APARECE SUAVEMENTE -->
-<script>
-  const observador = new IntersectionObserver((entradas) => {
-    entradas.forEach((entrada) => {
-      if (entrada.isIntersecting) {
-        entrada.target.classList.add('visible');
-        // Para animar só uma vez:
-        observador.unobserve(entrada.target);
-      }
-    });
-  });
-
-  document.querySelectorAll('.fade-in').forEach((el) => {
-    observador.observe(el);
-  });
-</script>
-
-<!-- CARROSSEL NAS AÇÕES -->
-<script>
-  const carousel = document.getElementById("carousel");
-  const btnEsquerda = document.getElementById("btn-esquerda");
-  const btnDireita = document.getElementById("btn-direita");
-
-  const scrollAmount = 320; // px
-  const autoplayDelay = 3000; // 4 segundos
-  let autoScroll;
-
-  function scrollRight() {
-    // Verifica se chegou ao final
-    const atEnd = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 5;
-    if (atEnd) {
-      // Volta para o início suavemente
-      carousel.scrollTo({ left: 0, behavior: "smooth" });
-    } else {
-      // Scroll normal
-      carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-  }
-
-  function startAutoplay() {
-    autoScroll = setInterval(scrollRight, autoplayDelay);
-  }
-
-  function stopAutoplay() {
-    clearInterval(autoScroll);
-  }
-  // Inicia autoplay
-  startAutoplay();
-
-  // Para o autoplay ao passar o mouse (opcional)
-  carousel.addEventListener("mouseenter", stopAutoplay);
-  carousel.addEventListener("mouseleave", startAutoplay);
-
-  // Botões manuais continuam funcionando
-  btnEsquerda.addEventListener("click", () => {
-    stopAutoplay();
-    carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-  });
-
-  btnDireita.addEventListener("click", () => {
-    stopAutoplay();
-    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
-  });
-</script>
-
-
-
+<script src="JS/script.js"></script>
 
 </body>
 </html>
